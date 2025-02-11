@@ -1,0 +1,20 @@
+[04-Feb-2025 20:52:22 Asia/Bangkok] PHP Warning:  Undefined variable $pdo in /var/www/vhosts/knw.ac.th/newstudent.knw.ac.th/login.php on line 18
+[04-Feb-2025 20:52:22 Asia/Bangkok] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /var/www/vhosts/knw.ac.th/newstudent.knw.ac.th/login.php:18
+Stack trace:
+#0 {main}
+  thrown in /var/www/vhosts/knw.ac.th/newstudent.knw.ac.th/login.php on line 18
+[04-Feb-2025 20:53:44 Asia/Bangkok] PHP Warning:  Undefined variable $pdo in /var/www/vhosts/knw.ac.th/newstudent.knw.ac.th/login.php on line 15
+[04-Feb-2025 20:53:44 Asia/Bangkok] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /var/www/vhosts/knw.ac.th/newstudent.knw.ac.th/login.php:15
+Stack trace:
+#0 {main}
+  thrown in /var/www/vhosts/knw.ac.th/newstudent.knw.ac.th/login.php on line 15
+[04-Feb-2025 20:53:47 Asia/Bangkok] PHP Warning:  Undefined variable $pdo in /var/www/vhosts/knw.ac.th/newstudent.knw.ac.th/login.php on line 15
+[04-Feb-2025 20:53:47 Asia/Bangkok] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /var/www/vhosts/knw.ac.th/newstudent.knw.ac.th/login.php:15
+Stack trace:
+#0 {main}
+  thrown in /var/www/vhosts/knw.ac.th/newstudent.knw.ac.th/login.php on line 15
+[04-Feb-2025 20:53:59 Asia/Bangkok] PHP Warning:  Undefined variable $pdo in /var/www/vhosts/knw.ac.th/newstudent.knw.ac.th/login.php on line 15
+[04-Feb-2025 20:53:59 Asia/Bangkok] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /var/www/vhosts/knw.ac.th/newstudent.knw.ac.th/login.php:15
+Stack trace:
+#0 {main}
+  thrown in /var/www/vhosts/knw.ac.th/newstudent.knw.ac.th/login.php on line 15
