@@ -8,8 +8,11 @@ if (!isset($_SESSION['teacher_id'])) {
     exit();
 }
 
-$pdo = new PDO("mysql:host=localhost;dbname=knwacth_Check80;charset=utf8", "knwacth_Check80", "Nb4z1k7?7");
-$pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+// Include config file
+require_once 'config.php';
+
+// Get PDO connection using the function
+$pdo = getPDO();
 
 try {
     // จำนวนทั้งหมดในระบบ

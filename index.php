@@ -96,8 +96,16 @@
             border-top: 5px solid #4CAF50;
         }
 
+        .admin-card {
+            border-top: 5px solid #9C27B0;
+        }
+
         .student-card .icon {
             color: #4CAF50;
+        }
+
+        .admin-card .icon {
+            color: #9C27B0;
         }
 
         .student-card .login-btn {
@@ -106,6 +114,14 @@
 
         .student-card .login-btn:hover {
             background-color: #388E3C;
+        }
+
+        .admin-card .login-btn {
+            background-color: #9C27B0;
+        }
+
+        .admin-card .login-btn:hover {
+            background-color: #7B1FA2;
         }
 
         .description {
@@ -130,7 +146,7 @@
 </head>
 <body>
     <div class="header">
-        <h1 class="school-name">โรงเรียนแก่นนครวิทยาลัย</h1>
+        <h1 class="school-name">โรงเรียนเด็กดีวิทยาคม</h1>
         <div class="system-name">ระบบจัดการนักเรียนที่มีเวลาเรียนไม่ถึง 80%</div>
     </div>
 
@@ -155,6 +171,17 @@
                 - ติดตามสถานะคำร้อง
             </p>
             <a href="stdlogin.php" class="login-btn">เข้าสู่ระบบสำหรับนักเรียน</a>
+        </div>
+
+        <div class="login-card admin-card">
+            <div class="icon">🔧</div>
+            <h2>สำหรับ Admin</h2>
+            <p class="description">
+                - นำเข้าข้อมูลนักเรียน ครู รายวิชา<br>
+                - จัดการฐานข้อมูลระบบ<br>
+                - ดูสถิติการใช้งาน
+            </p>
+            <a href="admin_login.php" class="login-btn">เข้าสู่ระบบ Admin</a>
         </div>
     </div>
 </body>

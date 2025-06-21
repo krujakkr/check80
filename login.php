@@ -3,8 +3,12 @@ error_reporting(E_ALL);
 ini_set('display_errors', 1);
 session_start();
 
-$pdo = new PDO("mysql:host=localhost;dbname=knwacth_Check80;charset=utf8", "knwacth_Check80", "Nb4z1k7?7");
-$pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+// Include config file
+require_once 'config.php';
+
+// Get PDO connection using the function
+$pdo = getPDO();
+
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     try {
@@ -167,7 +171,7 @@ if (isset($_GET['status']) && $_GET['status'] == 'logout') {
 </head>
 <body>
     <div class="login-container">
-        <h1 class="school-name">โรงเรียนแก่นนครวิทยาลัย</h1>
+        <h1 class="school-name">โรงเรียนเด็กดีวิทยาคม</h1>
         <h2 class="system-name">ระบบบันทึกนักเรียนมีเวลาเรียนไม่ถึง 80%</h2>
         
         <?php if (isset($success)): ?>

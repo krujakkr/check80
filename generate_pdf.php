@@ -13,9 +13,11 @@ if (!isset($_SESSION['teacher_id']) && !isset($_SESSION['student_id'])) {
     exit('Access Denied - Not logged in');
 }
 
-// เชื่อมต่อฐานข้อมูล
-$pdo = new PDO("mysql:host=localhost;dbname=knwacth_Check80;charset=utf8", "knwacth_Check80", "Nb4z1k7?7");
-$pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+// Include config file
+require_once 'config.php';
+
+// Get PDO connection using the function
+$pdo = getPDO();
 
 try {
     // ดึงข้อมูลบันทึก
@@ -99,7 +101,7 @@ try {
 
      <div style="text-align: right; margin-top: 10px;">วันที่ {$date} เดือน {$month} พ.ศ. {$year}</div>
     <div style="margin-top: 20px;">เรื่อง  ขอมีสิทธิ์สอบปลายภาค</div>
-    <div>เรียน  ผู้อำนวยการโรงเรียนแก่นนครวิทยาลัย</div>
+    <div>เรียน  ผู้อำนวยการโรงเรียนเด็กดีวิทยาคม</div>
     <div style="text-indent: 50px;">ด้วยข้าพเจ้า {$record['fullname']} นักเรียนชั้น {$record['class']} เลขที่ {$record['number']} เลขประจำตัว {$record['student_id']}</div>
     <div style="text-indent: 50px;">รับทราบจากประกาศโรงเรียนว่าไม่มีสิทธิ์สอบปลายภาค ภาคเรียนที่ ................ ปีการศึกษา ............................</div>
     <div>รหัสวิชา {$record['subject_id']} รายวิชา {$record['subject_name']} คุณครูผู้สอน {$record['teacher_name']}</div>
@@ -161,8 +163,8 @@ try {
     <div style="text-align: center; margin: 4px 0;">
         □ อนุญาตให้เข้าสอบ&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;□ ไม่อนุญาตให้สอบ<br><br>
         ลงชื่อ ................................................<br>
-        (นายคมสันต์ ชุมอภัย)<br>
-        ผู้อำนวยการโรงเรียนแก่นนครวิทยาลัย
+        (นายอำนวยสุข อำนวยการ)<br>
+        ผู้อำนวยการโรงเรียนเด็กดีวิทยาคม
     </div>
 EOD;
 

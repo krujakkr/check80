@@ -12,15 +12,18 @@ if (!isset($_SESSION['teacher_id'])) {
 //กำหนดช่วงเวลาในการบันทึกข้อมูลได้ 
 function isInSubmissionPeriod() {
     $start_date = strtotime('2025-02-01');
-    $end_date = strtotime('2025-02-07 23:59:59');
+    $end_date = strtotime('2050-02-07 23:59:59');
     $current_date = time();
     
     return ($current_date >= $start_date && $current_date <= $end_date);
 }
 
+// Include config file
+require_once 'config.php';
 
-$pdo = new PDO("mysql:host=localhost;dbname=knwacth_Check80;charset=utf8", "knwacth_Check80", "Nb4z1k7?7");
-$pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+// Get PDO connection using the function
+$pdo = getPDO();
+
 
 // Add this code to fetch teacher name
 $stmt = $pdo->prepare("SELECT teacher_name FROM users WHERE teacher_id = ?");

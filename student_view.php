@@ -9,8 +9,13 @@ if (!isset($_SESSION['student_id'])) {
 }
 
 try {
-    $pdo = new PDO("mysql:host=localhost;dbname=knwacth_Check80;charset=utf8", "knwacth_Check80", "Nb4z1k7?7");
-    $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+
+
+    // Include config file
+    require_once 'config.php';
+
+    // Get PDO connection using the function
+    $pdo = getPDO();
 
     // ดึงข้อมูลนักเรียน
     $stmt = $pdo->prepare("SELECT * FROM students WHERE student_id = ?");
